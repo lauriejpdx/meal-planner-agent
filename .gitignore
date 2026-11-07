@@ -1,0 +1,21 @@
+# Secrets and tokens
+.env
+.env.*
+*token*
+*secret*
+credentials*
+
+# Local working notes (not published yet)
+BUILD_NOTES.md
+IDEAS.md
+
+# Personal data
+pantry*
+data/
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+.DS_Store
