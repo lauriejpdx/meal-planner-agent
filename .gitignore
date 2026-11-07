@@ -9,9 +9,9 @@ credentials*
 BUILD_NOTES.md
 IDEAS.md
 
-# Personal data
-pantry*
+# Personal data (templates live in data.example/)
 data/
+output/
 
 # Python
 __pycache__/
