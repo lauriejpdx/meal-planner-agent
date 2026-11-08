@@ -1,0 +1,70 @@
+/* Styles for the meal-plan preview (output/plan-<date>.html links here). */
+:root{
+  --bg:#faf8f4; --surface:#ffffff; --ink:#1f2328; --muted:#5f6670; --line:#e7e2d9;
+  --accent:#2f6b4f; --accent-soft:#e6f0ea; --warn:#9a5b00; --warn-soft:#fdf1dc;
+  --cook:#2f6b4f; --quick:#4b5fa8; --quick-soft:#e9ecf8; --chip:#f2eee6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171a; --surface:#1d2024; --ink:#e9e6e0; --muted:#a3a9b1; --line:#2e3238;
+    --accent:#7cc5a0; --accent-soft:#1f3329; --warn:#f0b65c; --warn-soft:#3a2d18;
+    --cook:#7cc5a0; --quick:#9fb0f0; --quick-soft:#232a42; --chip:#262a2f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171a; --surface:#1d2024; --ink:#e9e6e0; --muted:#a3a9b1; --line:#2e3238;
+  --accent:#7cc5a0; --accent-soft:#1f3329; --warn:#f0b65c; --warn-soft:#3a2d18;
+  --cook:#7cc5a0; --quick:#9fb0f0; --quick-soft:#232a42; --chip:#262a2f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,-apple-system,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:32px 16px 64px}
+header{margin-bottom:24px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{font-family:Fraunces,Georgia,serif;font-size:34px;line-height:1.15;margin:6px 0 8px}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:0 0 12px}
+.sub{color:var(--muted);margin:0}
+.banner{margin-top:14px;display:inline-block;background:var(--warn-soft);color:var(--warn);padding:6px 12px;border-radius:999px;font-weight:600;font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.kpi .label{font-size:12px;color:var(--muted);font-weight:500}
+.kpi .val{font-size:26px;font-weight:700;margin-top:2px}
+.kpi .note{font-size:12px;color:var(--muted)}
+.kpi.good .val{color:var(--accent)}
+section{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}
+.weather{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:8px}
+.day{border:1px solid var(--line);border-radius:10px;padding:8px;text-align:center;font-size:13px}
+.day b{display:block}
+.day .t{font-size:16px;font-weight:600}
+.day .r{color:var(--quick);font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.tbl{overflow-x:auto}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.cook{background:var(--accent-soft);color:var(--cook)}
+.quick{background:var(--quick-soft);color:var(--quick)}
+.warnp{background:var(--warn-soft);color:var(--warn)}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.dish{font-weight:600}
+.remix{font-size:12px;font-weight:600;color:var(--quick)}
+.tags span{display:inline-block;background:var(--chip);border-radius:6px;padding:1px 7px;margin:2px 4px 2px 0;font-size:12.5px}
+a{color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.qs{counter-reset:q;list-style:none;padding:0;margin:0}
+.qs li{counter-increment:q;position:relative;padding:12px 12px 12px 46px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px}
+.qs li::before{content:counter(q);position:absolute;left:12px;top:12px;width:24px;height:24px;border-radius:50%;background:var(--warn-soft);color:var(--warn);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.store{margin-bottom:18px}
+.store h3{font-size:15px;margin:0 0 6px;display:flex;gap:8px;align-items:center}
+.total td{font-weight:700}
+.num{text-align:right;white-space:nowrap}
+ul{margin:6px 0;padding-left:20px}
+.foot{color:var(--muted);font-size:13px;text-align:center;margin-top:24px}
+@media (max-width:760px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .weather{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr}
+  h1{font-size:28px}
+}

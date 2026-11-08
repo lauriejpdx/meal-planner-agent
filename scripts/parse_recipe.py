@@ -4,7 +4,8 @@
 Usage: parse_recipe.py <url> [<url> ...]
 Output: JSON list, one entry per URL, with a status of:
   ok                 - ingredients found
-  site_unavailable   - site down or blocked (report the URL to the user)
+  site_unavailable   - site down or unreachable (report the URL to the user)
+  blocked            - site is up but refuses scripts (401/403/429); read it in Chrome instead
   no_recipe_data     - page loaded but has no structured recipe (try reading it in Chrome)
 """
 import json
@@ -37,7 +38,9 @@ def parse(url: str) -> dict:
         with urllib.request.urlopen(req, timeout=20) as resp:
             page = resp.read().decode("utf-8", errors="ignore")
     except urllib.error.HTTPError as exc:
-        return {"url": url, "status": "site_unavailable", "detail": f"HTTP {exc.code}"}
+        # A bot block is not a dead site: the page usually opens fine in a real browser.
+        status = "blocked" if exc.code in (401, 403, 429) else "site_unavailable"
+        return {"url": url, "status": status, "detail": f"HTTP {exc.code}"}
     except Exception as exc:
         return {"url": url, "status": "site_unavailable", "detail": str(exc)}
 

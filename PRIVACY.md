@@ -1,22 +1,22 @@
 # Privacy Policy — Weekly Meal Planner
 
-_Last updated: November 7, 2026_
+_Last updated: November 8, 2026_
 
 Weekly Meal Planner is a personal, single-user tool built and operated by the owner of this repository. It is not offered to the public.
 
 ## What data it accesses
-With the account owner's authorization, the app reads the owner's own Pinterest boards and pins (`boards:read`, `pins:read`) to find saved recipes.
+The agent runs in the owner's own logged-in Chrome browser (Claude in Chrome). It reads the owner's saved Pinterest pins and Instagram saves, recipe pages, and Whole Foods (Amazon) and Instacart search results and carts. It uses no API keys or access tokens. Weather comes from Open-Meteo and Zippopotam by ZIP code.
 
-## How the data is used
-Pin data is used only to generate a weekly meal plan and grocery list for the account owner. The app does not create, edit, or delete pins or boards.
+## What it changes
+After the owner approves a plan, it only adds items to the owner's Whole Foods and Instacart carts. It never checks out, pays, posts, comments, likes, or saves anything.
 
 ## Storage and sharing
-- Data is processed on the owner's own computer and is not sold, shared, or disclosed to third parties.
-- Pin content may be sent to an AI model provider (Anthropic) solely to generate the meal plan.
-- Access tokens are stored locally and can be revoked at any time from Pinterest settings.
+- The recipe index is cached in the browser's local storage. The profile, pantry, and weekly plans stay in local `data/` and `output/` folders, which are excluded from this repository.
+- Recipe and grocery content is sent to an AI model provider (Anthropic) solely to generate the meal plan.
+- Nothing is sold, shared, or disclosed to third parties.
 
 ## Data deletion
-The owner can delete all locally stored data at any time and revoke the app's access in Pinterest under Settings → Security → Apps.
+The owner can delete the local folders and clear the browser's site data at any time.
 
 ## Contact
 For questions, open an issue in this repository.

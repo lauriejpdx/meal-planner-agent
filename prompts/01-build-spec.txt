@@ -1,8 +1,8 @@
 # Prompt 01 — Build Spec
 
-Build me a weekly meal-planning agent that replaces my 1–2 hour Friday-night routine: scrolling my recipe saves, checking what's in my freezer, writing a grocery list, and searching for each item on Whole Foods.
+Build me a weekly meal-planning agent that replaces my 2 to 4 hour Friday-night through Saturday routine. This includes scrolling my recipe saves, checking what's in my pantry, writing a meal plan with a grocery list, and searching for each item on Whole Foods and Instacart. 
 
-**Context:** My profile (household, diet, cook nights, stores) is in `data/profile.md`, and my freezer and pantry are in `data/pantry.md`. Read both first. Gluten-free is non-negotiable.
+**Context:** My profile (household, diet, cook nights, stores) has been stored in `data/profile.md`, and my freezer and pantry are in `data/pantry.md`. Read both files first. Gluten-free is non-negotiable.
 
 **Stack:** Claude Code runs the workflow as a skill. Claude in Chrome handles every site that has no usable API, in my logged-in browser. Small Python scripts handle anything deterministic. Code fetches and parses; Claude makes the decisions.
 

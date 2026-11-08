@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Meal Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../templates/preview.css">
+</head>
+<body>
+<!--
+  TEMPLATE. Copy to output/plan-<YYYY-MM-DD>.html and replace the EXAMPLE content.
+  Four parts only: header + KPIs, meal plan, questions, shopping list. Keep it short.
+  Classes: pill cook | pill quick | pill warnp · remix · qs > li · num · total
+-->
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Meal planner · Preview</div>
+  <h1>Week of EXAMPLE Sat Nov 7 – Fri Nov 13</h1>
+  <p class="sub">🌧 Rain 4 of 7 days, highs 53–62° → soups and bakes. Searched 0,000 Pinterest + 0,000 Instagram saves.</p>
+  <span class="banner">Waiting for your approval. Nothing has been added to any cart.</span>
+</header>
+
+<div class="kpis">
+  <div class="kpi good"><div class="label">Plan total</div><div class="val">≈ $00.00</div><div class="note">WF $00 + butcher ~$0 est.</div></div>
+  <div class="kpi good"><div class="label">Under $000 target</div><div class="val">$00</div><div class="note">$00 under the $000 ceiling</div></div>
+  <div class="kpi"><div class="label">Saved by planning</div><div class="val">≈ $0.00</div><div class="note">shared items + pantry, real prices</div></div>
+</div>
+
+<section>
+  <h2>Meal plan</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Day</th><th>Dinner</th><th>Protein</th><th>Grain</th><th>Vegetable</th><th>Leftovers</th></tr></thead>
+    <tbody>
+      <tr><td><b>Sat 11/7</b><br><span class="pill cook">Cook</span></td><td class="dish"><a href="#">EXAMPLE dish</a> 🕰</td><td>Freezer chicken</td><td>Rice</td><td>Spinach, tomato</td><td class="small">Makes 4 → Sun lunch, Mon dinner · <b>freeze 1</b></td></tr>
+      <tr><td><b>Mon 11/9</b><br><span class="pill quick">Quick</span></td><td><span class="remix">REMIX</span><br><span class="dish">EXAMPLE remix</span></td><td>…</td><td>…</td><td>…</td><td class="small muted">from Sat</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small muted" style="margin:10px 0 0">❄️ N portions frozen for next week's quick nights.</p>
+</section>
+
+<section>
+  <h2>Questions for you</h2>
+  <ol class="qs"><li><b>Topic:</b> the question.</li></ol>
+  <p class="small muted" style="margin:8px 0 0">Applied your standing answers: … · Gluten-free swaps: …</p>
+</section>
+
+<section>
+  <h2>Shopping list</h2>
+  <div class="store">
+    <h3>🥩 Butcher <span class="pill warnp">prices est.</span></h3>
+    <div class="tbl"><table><tbody>
+      <tr><td style="width:70px">1 lb</td><td>Item, organic or pasture-raised</td><td class="num">~$0.00</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="store">
+    <h3>🛒 Whole Foods <span class="pill cook">all ✅ in stock</span></h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Qty</th><th>Product</th><th>Note</th><th class="num">Price</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Product title</td><td class="small muted">soup + bowl · ⚠️ no organic</td><td class="num">$0.00</td></tr>
+        <tr class="total"><td></td><td>Whole Foods subtotal</td><td></td><td class="num">$0.00</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small muted" style="margin:8px 0 0">Already in your cart and used this week: …</p>
+  </div>
+</section>
+
+<p class="foot">Does this look good? Swap anything before the agent fills your carts?</p>
+</div>
+</body>
+</html>
